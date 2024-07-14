@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eatly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/00a1759899.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <i class="fa-solid fa-kitchen-set"></i>
+            <h3>eatly</h3>
+        </a>
+        <article>
+            <a href="menu.html">Menu</a>
+            <a href="blogs.html">Blog</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="support.html">Contact</a>
+        </article>
+        <article class="entrance">
+            <a href="login.html">Login</a>
+            <a href="sign_up.html">Sign Up</a>
+        </article>
+    </header>
+    <hr>
+    <main>
+        <section class="tresh">
+            <article class="menu_slider">
+                <div>
+                    <h1>50% OF <br> <span style="color: rgba(255, 255, 255, 0.461);">WEEKEND</span></h1>
+                    <img src="images/food.png" alt="">  
+                </div>
+                <div>
+                    <h1>30% OF <br> <span style="color: rgba(255, 255, 255, 0.461);">HOLIDAYS</span></h1>
+                    <img src="images/food_2.png" alt="">  
+                </div>
+                <div>
+                    <h1>10% OF <br> <span style="color: rgba(255, 255, 255, 0.461);">BIRTHDAYS</span></h1>
+                    <img src="images/food_3.png" alt="">  
+                </div>
+                <article>
+                    <hr>
+                    <hr>
+                    <hr>
+                </article>
+                <script>
+                    let index = 0;
+                    const slides = document.querySelectorAll('div');
+                    const hr = document.querySelectorAll('article>hr');
+                    const time = 3000;
+
+                    function change_slide(){
+                        slides[index].style.opacity = 0;
+                        hr[index].style.width = '4em';
+                        hr[index].style.backgroundColor = 'rgba(125, 51, 216, 0.523)';
+
+                        index += 1;
+                        if (index + 1 > slides.length) {
+                            index = 0;
+                        }
+
+                        slides[index].style.opacity = 1;
+                        hr[index].style.width = '8em';
+                        hr[index].style.backgroundColor ='rgb(125, 51, 216)';
+                    };
+
+                    setInterval(change_slide, time);
+                </script>
+            </article>
+            <article class="category">
+                <h2>Category</h2>
+                <article>
+                    <div>
+                        <img src="images/Pizza.png" alt="">
+                        <p>Pizza</p>
+                    </div>
+                    <div>
+                        <img src="images/Hotdog.png" alt="" style="width: 3.5em;">
+                        <p>Asian</span>
+                    </div>
+                    <div>
+                        <img src="images/Doughnut.png" alt="">
+                        <p>Donut</p>
+                    </div>
+                    <div>
+                        <img src="images/Icecream.png" alt="" style="width: 2em;">
+                        <p>Ice</p>
+                    </div>
+                </article>
+                <h2>Sort By</h2>
+                <p class="recomended">Recomended</p>
+                <p>Most Popular</p>
+                <h2>Price</h2>
+                <input type="range" min="0" max="100" step="25">
+                <div>
+                    <p>$0</p>
+                    <p>$25</p>
+                    <p>$50</p>
+                    <p>$75</p>
+                    <p>$100</p>
+                </div>
+                <a href="#">Apply</a>
+            </article>
+            <article class="search">
+                <input type="text" placeholder="Search">
+                <div>
+                    <button onclick="change_button(0, 1)">Food</button>
+                    <button onclick="change_button(1, 0)">Restaurent</button>
+                </div>
+            </article>
+        </section>
+        <section class="menu_list">
+            <section class="menu">
+                <article>
+                    <h2>Our Top <span style="color: rgb(125, 51, 216);">Restaurants</span></h2>
+                    <a href="restaurant.html">View all</a>
+                </article>
+                <section class="restaurants">
+                    <a href="restaurant.html">
+                        <img src="images/food_1.jfif" alt="">
+                        <section>
+                            <p>Healthy</p>
+                            <h3>The Chicken King</h3>
+                            <article>
+                                <div>
+                                    <span>24 min</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark"></i>
+                            </article>
+                        </section>
+                    </a>
+                    <a href="restaurant.html">
+                        <img src="images/food_2.jfif" alt="">
+                        <section>
+                            <p style="width: 6em; color: red; background-color: rgba(255, 0, 0, 0.237);">Trending</p>
+                            <h3>The Burger King</h3>
+                            <article>
+                                <div>
+                                    <span>24 min</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark"></i>
+                            </article>
+                        </section>
+                    </a>
+                    <a href="restaurant.html">
+                        <img src="images/food_1.jfif" alt="">
+                        <section>
+                            <p>Healthy</p>
+                            <h3>The Chicken King</h3>
+                            <article>
+                                <div>
+                                    <span>24 min</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark"></i>
+                            </article>
+                        </section>
+                    </a>
+                </section>
+                <hr>
+            </section>
+            <section class="menu">
+                <article>
+                    <h2>Our Top <span style="color: rgb(125, 51, 216);">Dishes</span></h2>
+                    <a href="restaurant.html">View all</a>
+                </article>
+                <section class="dishes">
+                    <article>
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="images/food.png" alt="">
+                        <p>Healthy</p>
+                        <h3>Chicken Hell</h3>
+                        <div>
+                            <span>24 min</span>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                        <article>
+                            <div>
+                                <p>$12</p>
+                                <span>.99</span>
+                            </div>
+                            <p>+</p>
+                        </article>
+                    </article>
+                    <article>
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="images/food_2.png" alt="">
+                        <p style="width: 6em; color: red; background-color: rgba(255, 0, 0, 0.237);">Trending</p>
+                        <h3>Swe Dish</h3>
+                        <div>
+                            <span>34 min</span>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <article>
+                            <div>
+                                <p>$19</p>
+                                <span>.99</span>
+                            </div>
+                            <p>+</p>
+                        </article>
+                    </article>
+                    <article>
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="images/food_3.png" alt="">
+                        <p style="width: 6em; color: green; background-color: rgba(0, 128, 0, 0.361);">Supreme</p>
+                        <h3>Swe Dish</h3>
+                        <div>
+                            <span>34 min</span>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <article>
+                            <div>
+                                <p>$19</p>
+                                <span>.99</span>
+                            </div>
+                            <p>+</p>
+                        </article>
+                    </article>
+                    <article>
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="images/food.png" alt="">
+                        <p>Healthy</p>
+                        <h3>Chicken Hell</h3>
+                        <div>
+                            <span>24 min</span>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                        <article>
+                            <div>
+                                <p>$12</p>
+                                <span>.99</span>
+                            </div>
+                            <p>+</p>
+                        </article>
+                    </article>
+                    <article>
+                        <i class="fa-regular fa-heart"></i>
+                        <img src="images/food_2.png" alt="">
+                        <p style="width: 6em; color: red; background-color: rgba(255, 0, 0, 0.237);">Trending</p>
+                        <h3>Swe Dish</h3>
+                        <div>
+                            <span>34 min</span>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <article>
+                            <div>
+                                <p>$19<span>.99</span></p>
+                            </div>
+                            <p>+</p>
+                        </article>
+                    </article>
+                </section>
+                <hr>
+            </section>
+        </section>
+        <script>
+            const buttons = document.querySelectorAll('.search>div>button');
+            const menu_list = document.querySelector('.menu_list');
+            const menu = document.querySelectorAll('.menu');
+
+            function change_button(index_new_button, index_last_button){
+                menu_list.insertBefore(menu[index_new_button], menu.index_last_button);
+
+                buttons[index_new_button].style.backgroundColor = 'white';
+                buttons[index_new_button].style.color = 'rgb(125, 51, 216)';
+                buttons[index_last_button].style.backgroundColor = 'rgb(125, 51, 216)';
+                buttons[index_last_button].style.color = 'white';
+            };
+        </script>
+        <h2>Frequantly Asked <br> <span style="color: rgb(125, 51, 216);">Questions</span></h2>
+        <section class="question">
+            <details>
+                <summary>
+                    <h3>How long does delivery take?</h3>
+                    <p >+</p>
+                </summary>
+                <p>You Can Get Information by Contacting Our Support Team Have 24/7 Service. <br> What's The Difference Between Free And Paid Plan?</p>
+            </details>
+            <hr>
+            <details>
+                <summary>
+                    <h3>How Does It Work?</h3>
+                    <p >+</p>
+                </summary>
+                <p>You Can Get Information by Contacting Our Support Team Have 24/7 Service. <br> What's The Difference Between Free And Paid Plan?</p>
+            </details>
+            <hr>
+            <details>
+                <summary>
+                    <h3>How does your food delivery service work?</h3>
+                    <p >+</p>
+                </summary>
+                <p>You Can Get Information by Contacting Our Support Team Have 24/7 Service. <br> What's The Difference Between Free And Paid Plan?</p>
+            </details>
+            <hr>
+            <details>
+                <summary>
+                    <h3>What payment options do you accept?</h3>
+                    <p >+</p>
+                </summary>
+                <p>You Can Get Information by Contacting Our Support Team Have 24/7 Service. <br> What's The Difference Between Free And Paid Plan?</p>
+            </details>
+            <hr>
+            <details>
+                <summary>
+                    <h3>Do you offer dicounts or promoutions?</h3>
+                    <p >+</p>
+                </summary>
+                <p>You Can Get Information by Contacting Our Support Team Have 24/7 Service. <br> What's The Difference Between Free And Paid Plan?</p>
+            </details>
+            <hr>
+            <script>
+                const detail = document.querySelectorAll('details');
+                detail.forEach(detail => {
+                    detail.addEventListener('toggle', function(event){
+                        if (event.target.open) {
+                            event.target.querySelector('summary>p').textContent = '-';
+                        }
+                        else {
+                            event.target.querySelector('summary>p').textContent = '+';
+                        }
+                    })
+                });
+            </script>
+        </section>
+    </main>
+    <footer style="margin-top: 15em;">
+        <section class="footer_head">
+            <a href="index.html">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <h3>eatly</h3>
+            </a>
+            <article>
+                <a href="menu.html">Menu</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="blogs.html">Blog</a>
+                <a href="support.html">Contact</a>
+            </article>
+        </section>
+        <hr>
+        <section class="end">
+            <p>&#169; 2023 EATLY All Rights Reserved.</p>
+            <article>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </article>
+        </section>
+    </footer>
+</body>
