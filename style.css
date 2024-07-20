@@ -1683,6 +1683,7 @@ main>h3{
         width: 24em;
         margin: 0 1em;
     }
+    
 
     .title{
         display: block;
@@ -1948,13 +1949,13 @@ main>h3{
 
 
     main>h2{
-        /* text-align: center; */
+        width: 8.5em;
         font-size: 3em;
         margin-top: 3em;
     }
 
     .restaurants{
-        display: block;
+        flex-direction: column;
         width: 24em;
         margin: 0 1em;
     }
@@ -1968,12 +1969,12 @@ main>h3{
     }
     
     .restaurants>a{
-        /* width: 24em; */
+        width: 24em;
         box-shadow: .1em .1em 1em rgb(136, 136, 136);
         border-radius: 1.5em;
         text-decoration: none;
         color: black;
-        margin: 3em 0;
+        margin: 2em 0;
     }
     
     .restaurants>a>section{
@@ -1981,7 +1982,7 @@ main>h3{
     }
     
     .restaurants>a>section>p{
-        font-size: .9em;
+        font-size: .7em;
         background-color: rgba(255, 255, 6, 0.196);
         color: rgb(255, 179, 0);
         padding: .2em .5em;
@@ -1992,24 +1993,24 @@ main>h3{
     
     .restaurants>a>section>h3{
         margin-top: .3em;
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
     
     .restaurants>a>section>article{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1em;
+        /* margin-bottom: .5em; */
     }
     
     .restaurants>a>section>article>div>span{
         color: gray;
-        font-size: 1.2em;
+        font-size: 1em;
         align-items: center;
     }
     
     .restaurants>a>section>article>div>i{
-        margin-left: 1.2em;
+        margin-left: 1em;
         margin-right: .1em;
         color: rgb(125, 51, 216);
         font-size: 1.2em;
@@ -2018,17 +2019,499 @@ main>h3{
     .restaurants>a>section>article>i{
         text-align: center;
         color: rgb(125, 51, 216);
-        font-size: 1.2em;
+        font-size: 1em;
         padding: .7em;
         background-color: rgba(125, 51, 216, 0.306);
         border-radius: 3em;
     }
     
     main>a{
-        margin-left: 83em;
+        margin-left: 20em;
         text-decoration: none;
         color: gray;
+        font-size: 1em;
+    }
+
+    .dishes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3em 1em;
+        width: 24em;
+        grid-gap: 1em;
+    }
+    
+    .dishes>article{
+        box-shadow: .1em .1em 1em rgb(136, 136, 136);
+        border-radius: 1.5em;
+        width: 11em;
+        padding: 1em 1em;
+        padding-bottom: 1.5em;
+    }
+
+    .dishes>article:nth-child(5){
+        display: none;
+    }
+    
+    .dishes>article>i{  
+        left: 1em;
+        font-size: .85em;
+        color: black;
+    }
+    
+    .dishes>article>img{
+        width: 8em;
+        object-fit: cover;
+        margin-left: .5em;
+    }
+    
+    .dishes>article>p{
+        font-size: .7em;
+        background-color: rgba(255, 255, 6, 0.196);
+        color: rgb(255, 179, 0);
+        padding: .2em .5em;
+        width: 5em;
+        border-radius: .3em;
+        text-align: center;
+    }
+    
+    .dishes>article>h3{
         font-size: 1.2em;
+        margin: .2em 0;
+    }
+    
+    .dishes>article>div{
+        display: flex;
+        align-items: center;
+    }
+    
+    .dishes>article>div>span{
+        color: gray;
+        font-size: .8em;
+        align-items: center;
+    }
+    
+    .dishes>article>div>i{
+        margin-left: .4em;
+        margin-right: .2em;
+        color: rgb(125, 51, 216);
+        font-size: .8em;
+    }
+    
+    .dishes>article>article{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .dishes>article>article{
+        margin-top: .3em;
+        font-size: 1.3em;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .dishes>article>article>div{
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .dishes>article>article>div>span{
+        font-size: .8em;
+        margin-bottom: .1em;
+        color: gray;
+    }
+    
+    .dishes>article>article>p{
+        padding: .01em .5em;
+        background-color: rgba(25, 25, 25, 0.923);
+        color: white;
+        border-radius: .3em;
+    }
+
+    .purchases{
+        margin: 10em 0;
+        flex-direction: column;
+    }
+    
+    .purchases>article>h2{
+        font-size: 2.5em;
+        width: 9em;
+        text-align: center;
+        margin-left: .7em;
+    }
+    
+    .purchases>article>article{
+        margin: 2em 1em;
+        width: 24em;
+        display: flex;
+        padding: 1em;
+        border-radius: 1em;
+        background-color: white;
+        box-shadow: -.5em .5em 1.5em rgba(0, 0, 0, 0.281);
+    }
+    
+    .purchases>article>article>img{
+        width: 5em;
+        height: 5em;
+        object-fit: cover;
+    }
+    
+    .purchases>article>article>div{
+        margin-left: 1em;
+        margin-top: .5em;
+    }
+    
+    .purchases>article>article>div>h3{
+        margin: .3em 0;
+        font-size: 1em;
+    }
+    
+    .purchases>article>article>div>p{
+        font-size: .8em;
+        font-weight: 500;
+    }
+    
+    .purchases>article>article>span{
+        display: block;
+        margin-top: 5em;
+        margin-left: 8em;
+        color: gray;
+        font-size: .8em;
+    }
+    
+    .info_purchases{
+        margin-top: 5em !important;
+        margin: 0 1em;
+        padding: 2em;
+        width: 24em;
+        box-shadow: -.5em .5em 1.5em rgba(0, 0, 0, 0.281);
+        border-radius: 2em;
+        height: 27em;
+    }
+    
+    .info_purchases>div{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    
+    .info_purchases>div>h3{
+        font-size: 1.5em;
+    }
+    
+    .info_purchases>div>select{
+        font-size: 1em;
+        padding: .3em .6em;
+        border-radius: .5em;
+        background-color: rgba(214, 214, 214, 0.26);
+        border: none;
+        font-weight: 500;
+    }
+    
+    .info_purchases>section{
+        border: solid rgba(128, 128, 128, 0.228) .13em;
+        padding: 1em;
+        border-radius: 1em;
+        margin: 2em 0;
+    }
+    
+    .info_purchases>section>article{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .info_purchases>section>article>i{
+        font-size: 1.5em;
+        padding: .5em;
+        border-radius: 3em;
+    }
+    
+    #exprense{
+        color: rgb(125, 51, 216);
+        background-color: rgba(125, 51, 216, 0.145);
+    }
+    
+    #usage{
+        color: rgb(87, 209, 87);
+        background-color: rgba(87, 209, 87, 0.135);
+    }
+    
+    .info_purchases>section>article>div{
+        margin-right: 3em;
+        line-height: 1.2em;
+    }
+    
+    .info_purchases>section>article>div>p{
+        font-weight: 550;
+        font-size: 1em;
+    }
+    
+    .info_purchases>section>article>div>span{
+        color: gray;
+        font-size: .7em;
+    }
+    
+    .info_purchases>section>article>p{
+        font-weight: 550;
+        font-size: 1em;
+    }
+    
+    .info_purchases>section>hr{
+        margin-top: 2em;
+        height: .7em;
+        border-radius: 1em;
+        border: none;
+        width: 16em;
+    }
+    
+    .hr_exprense{
+        background-color: rgba(125, 51, 216, 0.145);
+    }
+    
+    .hr_exprense::before{
+        content: '_';
+        width: 13em;
+        display: block;
+        background-color: rgb(125, 51, 216);
+        height: .7em;
+        border-radius: 1em;
+    }
+    
+    .hr_usage{
+        background-color: rgba(255, 255, 6, 0.196);
+    }
+    
+    .hr_usage::before{
+        content: '_';
+        width: 10em;
+        display: block;
+        background-color: rgb(255, 179, 0);
+        height: .7em;
+        border-radius: 1em;
+    }
+
+    .customer{
+        flex-direction: column;
+        margin: 10em 1em;
+        
+    }
+    
+    .alex{
+        width: 24em;
+        height: 17em;
+        box-shadow: .5em .5em 1em rgba(0, 0, 0, 0.281);
+        padding: 2em;
+        border-radius: 2em;
+    }
+    
+    .alex>section{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    
+    .alex>section>img{
+        width: 4em;
+        height: 4em;
+        object-fit: cover;
+        border-radius: 50%;
+        
+    }
+    
+    .alex>section>div{
+        margin-left: 1.5em;
+    }
+    
+    .alex>section>div>h3{
+        font-size: 1em;
+    }
+    
+    .alex>section>div>p{
+        font-size: .8em;
+    }
+    
+    .alex>p{
+        font-size: .8em;
+        color: rgb(88, 88, 88);
+        margin-bottom: 2em;
+    }
+    
+    .alex>i{
+        font-size: 1em;
+        color: rgb(255, 179, 0);
+    }
+    
+    .comments{
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 20em;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    
+    .comments>article{
+        width: 22em;
+        box-shadow: .1em .15em 1em gray;
+        padding: 2em;
+        border-radius: 2em;
+        margin-right: 2em;
+        margin-bottom: 3em;
+    }
+    
+    .comments>article>p{
+        font-size: 1em;
+        color: gray;
+    }
+    
+    .comments>article>i{
+        font-size: 1em;
+        margin-top: 1em;
+        color: rgb(255, 179, 0);
+    }
+    
+    ::-webkit-scrollbar {
+        height: 1em;
+    }
+      
+    ::-webkit-scrollbar-track-piece {
+        background-color: rgba(125, 51, 216, 0.145);
+        border-radius: 2rem;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: rgb(125, 51, 216);
+        border-radius: 2rem;
+    }
+
+    .sub{
+        width: 24em;
+        margin: 15em 1em;
+        display: grid;
+        padding: 2em;
+        padding-left: 5em;
+        height: 20em;
+        border-radius: 2em;
+        background-color: rgb(125, 51, 216);
+    
+    }
+    
+    .sub>article>h1{
+        font-size: 3em;
+        color: rgba(255, 255, 255, 0.762);
+        margin-bottom: .5em;
+    }
+    
+    .sub>article>input{
+        position: absolute;
+        width: 22em;
+        height: 3.5em;
+        padding: 0 1em;
+        border-radius: 1em;
+        border: none;
+        font-size: 1em;
+        right: 2em;
+    }
+    
+    .sub>article>a{
+        position: relative;
+        background-color: rgb(125, 51, 216);
+        color: rgba(255, 255, 255, 0.762);
+        text-decoration: none;
+        padding: 1em 1.5em;
+        border-radius: 1em;
+        left: 13.5em; 
+        font-size: .8em;
+        top: 1.2em;
+    }
+    
+    .sub>img{
+        width: 10em;
+        position: relative;
+        left: 2.5em;
+        top: 3em;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        width: 24em;
+        margin: 0 1em;
+    }
+
+    footer>hr{
+        display: none;
+    }
+
+    .footer_head{
+        flex-direction: column;
+        /* align-items: center; */
+        /* margin-bottom: 2em; */
+    }
+    
+    .footer_head>a{
+        color: rgb(125, 51, 216);
+        align-items: center;
+        text-decoration: none;
+        margin-right: 5em;
+        margin-bottom: 1em;
+    }
+    
+    .footer_head>a>i{
+        font-size: 1.5em;
+        background-color: rgba(210, 210, 210, 0.769);
+        padding: .3em;
+        border-radius: .3em;
+        border: solid rgb(125, 51, 216) .2vw;
+        margin-right: .5em;
+        box-shadow: .1em .15em rgb(125, 51, 216);
+    }
+    
+    .footer_head>a>h3{
+        font-size: 1.5em;
+    }
+
+    .footer_head>article{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-right: 7em;
+    }
+    
+    .footer_head>article>a{
+        text-decoration: none;
+        color: rgba(57, 57, 57, 0.858);
+        font-size: 1.2em;
+        font-weight: 450;
+        transition: .5s;
+        margin: .3em 0;
+    }
+    
+    .footer_head>article>a:hover{
+        color: black;
+        transition: .5s;   
+        font-weight: 500;
+    }
+    
+    .end{
+        flex-direction: column-reverse;
+        margin-top: .5em;
+        margin-bottom: 3em;
+    }
+    
+    .end>p{
+        font-size: .7em;
+        color: gray;
+    }
+    
+    .end>article>i{
+        font-size: 1.5em;
+        margin-right: 1em;
+    }
+    
+    .end>article>i:nth-child(4){
+        margin-right: 0;
     }
 }
 
