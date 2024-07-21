@@ -22,11 +22,32 @@
             <a href="pricing.html">Pricing</a>
             <a href="support.html">Contact</a>
         </article>
+
         <article class="entrance">
             <a href="login.html">Login</a>
             <a href="sign_up.html">Sign Up</a>
         </article>
-        <img src="images/menu.png" alt="">
+        <img src="images/menu.png" alt="" onclick="open_modal()">
+        <dialog>
+            <i class="fa-solid fa-xmark" onclick="close_modal()"></i>
+            <a href="menu.html">Menu</a>
+            <a href="blogs.html">Blog</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="support.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="sign_up.html">Sign Up</a>
+        </dialog>
+        <script>
+            const modal = document.querySelector('dialog');
+
+            function open_modal(){
+                modal.style.display = 'grid';
+            };
+
+            function close_modal(){
+                modal.style.display = 'none';
+            };
+        </script>
     </header>
     <hr>
     <main>
@@ -261,7 +282,7 @@
                         <h3>Swe Dish</h3>
                         <p>Delivered</p>
                     </div>
-                    <span style="margin-left: 7em;">Yesteraday</span>
+                    <span style="margin-left: 8em;">Yesteraday</span>
                 </article>
                 <article>
                     <img src="images/food_3.png" alt="">
@@ -269,7 +290,7 @@
                         <h3 style="width: 7em;">Fish Hell Veg</h3>
                         <p style="color: red;">Cancelled</p>
                     </div>
-                    <span style="margin-left: 3em;">Yesteraday</span>
+                    <span style="margin-left: 5em;">Yesteraday</span>
                 </article>
             </article>
             <article class="info_purchases">
