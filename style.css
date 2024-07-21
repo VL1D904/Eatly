@@ -1679,6 +1679,44 @@ main>h3{
         display: block;
     }
 
+    header>dialog{
+        margin-top: 22.1em;
+        border: none;
+        margin-left: 10.5em;
+        padding: 2em;
+        display: none;
+        grid-template-columns: 1fr;
+        width: 15em;
+        transition: display 1s;
+    }
+
+    header>dialog>i{
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    header>dialog>a{
+        text-decoration: none;
+        color: gray;
+        margin: .5em 0;
+        width: 8em;
+    }
+
+    header>dialog>a:nth-child(6){
+        margin-top: 1.5em;
+        color: rgb(125, 51, 216);
+        padding: .6em 1em;
+        border: solid rgb(125, 51, 216) .3vw;
+        border-radius: 1em;
+    }
+
+    header>dialog>a:nth-child(7){
+        color: white;
+        background-color: rgb(125, 51, 216);
+        padding: .7em 1em;
+        border-radius: 1em;
+    }
+
     *>hr{
         width: 24em;
         margin: 0 1em;
